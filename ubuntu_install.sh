@@ -301,12 +301,13 @@ echo "Exit NeoVim..."
 echo "All the plugins are installed!"
 echo "----------------------------------------------------------"
 echo ""
-sleep 1
-
-read -p "Set NeoVim as the default editor and replace vim? [Y/N]: "  
 echo y | command
 
-# Eihab Confirm 
+# Eihab Confirm
+# sleep 1
+# echo y | command
+# read -p "Set NeoVim as the default editor and replace vim? [Y/N]: "  
+# echo y | command 
 # confirm 
 # echo y
 # if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then 
