@@ -303,10 +303,14 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-read -p "Set NeoVim as the default editor and replace vim? [Y/N]: " confirm
+read -p "Set NeoVim as the default editor and replace vim? [Y/N]: " 
+echo y
 
-if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then
+# Eihab Confirm 
+# confirm
+# if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then 
     # BASH
+    
     echo "export EDITOR=/snap/bin/nvim" >>~/.bashrc
     echo "alias vim='nvim'" >>~/.bashrc
     echo "alias vi='nvim'" >>~/.bashrc
