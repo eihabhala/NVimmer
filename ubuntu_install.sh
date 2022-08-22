@@ -307,8 +307,8 @@ read -p "Set NeoVim as the default editor and replace vim? [Y/N]: "
 echo y
 
 # Eihab Confirm 
-confirm 
-echo y
+# confirm 
+# echo y
 # if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then 
     # BASH
     
