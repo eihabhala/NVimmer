@@ -303,11 +303,12 @@ echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
-read -p "Set NeoVim as the default editor and replace vim? [Y/N]: " 
+read -p "Set NeoVim as the default editor and replace vim? [Y/N]: "  
 echo y
 
 # Eihab Confirm 
-# confirm
+confirm 
+echo y
 # if [ "$confirm" = "y" ] || [ "$confrim" = "Y" ] || [ "$confirm" = "yes" ] || [ "$confirm" = "Yes" ]; then 
     # BASH
     
