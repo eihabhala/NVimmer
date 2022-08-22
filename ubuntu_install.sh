@@ -321,7 +321,9 @@ echo y | command
     echo "export EDITOR=/snap/bin/nvim" >>~/.zshrc
     echo "alias vim='nvim'" >>~/.zshrc
     echo "alias vi='nvim'" >>~/.zshrc
-fi
+
+# Eihab Changes
+# fi
 
 echo ""
 echo "-------------------------------------------------------END"
