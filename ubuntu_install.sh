@@ -304,7 +304,7 @@ echo ""
 sleep 1
 
 read -p "Set NeoVim as the default editor and replace vim? [Y/N]: "  
-yes
+echo y | command
 
 # Eihab Confirm 
 # confirm 
