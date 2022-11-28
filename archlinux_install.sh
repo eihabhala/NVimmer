@@ -49,6 +49,7 @@ status=$?
 if [ "$status" != 0 ]; then
     echo "Install sudo"
     pacman -S sudo --noconfirm
+    pacman -S fakeroot --noconfirm
 fi
 sudo pacman -S git --noconfirm
 sudo pacman -Syu 
