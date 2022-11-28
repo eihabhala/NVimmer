@@ -54,6 +54,20 @@ brew doctor
 echo "-----------------------------------------------------------"
 echo ""
 
+sleep 3
+
+
+echo "Check Gcc && Ruby-dev && PKG-Config -------------------------------------------------"
+echo "Installing gcc"
+brew install gcc
+brew vendor-install ruby
+brew install pkg-config
+echo "-----------------------------------------------------------"
+echo ""
+
+sleep 3
+
+
 echo "Install Linux Compile Tools and Env------------------------"
 sudo --version
 status=$?
