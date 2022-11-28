@@ -75,7 +75,13 @@ snap --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Snap..."
-    sudo pacman -S snapd --noconfirm
+    git clone https://aur.archlinux.org/snapd.git
+    cd snapd
+    makepkg -si
+    sudo systemctl enable --now snapd.socket
+    sudo ln -s /var/lib/snapd/snap /snap
+    sudo snap install hello-world
+    hello-world
     export =$PATH:/snap/bin
 fi
 echo "-----------------------------------------------------------"
@@ -159,7 +165,7 @@ latexmk -v
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Latexmk..."
-    sudo pacman -S latexmk --noconfirm
+    sudo pacman -S latex-mk --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -179,7 +185,7 @@ echo ""
 echo "Python3:"
 pip3 --version
 if [ "$?" != 0 ]; then
-    sudo pacman -S python3-pip --noconfirm
+    sudo pacman -S python-pip --noconfirm
 fi
 pip3 install neovim
 pip3 install neovim-remote
