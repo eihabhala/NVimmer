@@ -57,11 +57,12 @@ echo ""
 sleep 3
 
 
-echo "Check Gcc && Ruby-dev && PKG-Config -------------------------------------------------"
+echo "Check Gcc && Ruby-dev && PKG-Config && Tools -------------------------------------------------"
 echo "Installing gcc"
 brew install gcc
 brew vendor-install ruby
 brew install pkg-config
+brew install libseccomp
 echo "-----------------------------------------------------------"
 echo ""
 
