@@ -52,7 +52,7 @@ if [ "$status" != 0 ]; then
 fi
 sudo pacman -S git --noconfirm
 sudo pacman -Syu 
-sudo pacman -S cmake base-devel automake git ssl-cert clang-tools --noconfirm
+sudo pacman -S cmake base-devel fakeroot automake git ssl-cert clang-tools --noconfirm
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
