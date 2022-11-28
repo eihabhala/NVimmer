@@ -46,7 +46,7 @@ sleep 3
 
 echo "Check brew -------------------------------------------------"
 echo "Installing homebrew and brew Doctor"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)" --noconfirm
 
 [ -d /home/linuxbrew/.linuxbrew ] && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
