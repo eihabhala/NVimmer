@@ -23,11 +23,11 @@ function blue() {
 green " _   ___     ___                               "
 green "| \\ | \\ \\   / (_)_ __ ___  _ __ ___   ___ _ __ "
 green "|  \\| |\\ \\ / /| | '_ \` _ \\| '_ \` _ \\ / _ \\ '__|"
-green "| |\\  | \\ V / | | | | | | | | | | | |  __/ |   "
+green "| |\\  | \\  / | | | | | | | | | | | |  __/ |   "
 green "|_| \\_|  \\_/  |_|_| |_| |_|_| |_| |_|\\___|_|"
 
-green "Welcome to NVimmer, Make your NeoVim/Vim perform as an IDE!!!"
-green '专门为 NeoVim 打造的一键式IDE脚本'
+green "Welcome to NVimmer, Make your NeoVim/Vim perform as an !!!"
+green '专门为 NeoVim 打造的一键式脚本'
 blue "Email: devilyouwei@gmail.com"
 
 echo ""
@@ -50,7 +50,7 @@ if [ "$status" != 0 ]; then
     echo "Install sudo"
     pacman -S sudo --noconfirm
 fi
-sudo pacman -S git
+sudo pacman -S git --noconfirm
 sudo pacman -Syu 
 sudo pacman -S cmake base-devel automake git ssl-cert clang-tools --noconfirm
 echo "-----------------------------------------------------------"
@@ -76,7 +76,7 @@ status=$?
 if [ "$status" != 0 ]; then
     echo "Install Snap..."
     sudo pacman -S snapd --noconfirm
-    export PATH=$PATH:/snap/bin
+    export =$PATH:/snap/bin
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -332,7 +332,7 @@ echo "--------------------NVimmer-------------------------------"
 green " _   ___     ___                               "
 green "| \\ | \\ \\   / (_)_ __ ___  _ __ ___   ___ _ __ "
 green "|  \\| |\\ \\ / /| | '_ \` _ \\| '_ \` _ \\ / _ \\ '__|"
-green "| |\\  | \\ V / | | | | | | | | | | | |  __/ |   "
+green "| |\\  | \\  / | | | | | | | | | | | |  __/ |   "
 green "|_| \\_|  \\_/  |_|_| |_| |_|_| |_| |_|\\___|_|"
 
 echo "--------------------Favour--------------------------------"
