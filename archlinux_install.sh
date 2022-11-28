@@ -50,6 +50,7 @@ if [ "$status" != 0 ]; then
     echo "Install sudo"
     pacman -S sudo --noconfirm
     sudo pacman -S fakeroot --noconfirm
+    sudo pacman -Ss gcc
 fi
 sudo pacman -S git --noconfirm
 sudo pacman -Syu 
@@ -78,7 +79,7 @@ if [ "$status" != 0 ]; then
     echo "Install Snap..."
     git clone https://aur.archlinux.org/snapd.git
     cd snapd
-    makepkg -si
+    makepkg -si --noconfirm
     sudo service snapd start
     sudo systemctl enable --now snapd.socket
     sudo ln -s /var/lib/snapd/snap /snap
