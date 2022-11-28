@@ -64,6 +64,7 @@ brew vendor-install ruby
 brew install pkg-config
 brew install libseccomp
 brew install make
+brew install autoconf
 echo "-----------------------------------------------------------"
 echo ""
 
