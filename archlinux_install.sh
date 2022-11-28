@@ -78,6 +78,7 @@ if [ "$status" != 0 ]; then
     git clone https://aur.archlinux.org/snapd.git
     cd snapd
     makepkg -si
+    sudo service snapd start
     sudo systemctl enable --now snapd.socket
     sudo ln -s /var/lib/snapd/snap /snap
     sudo snap install hello-world
