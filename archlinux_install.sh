@@ -63,6 +63,7 @@ brew install gcc
 brew vendor-install ruby
 brew install pkg-config
 brew install libseccomp
+brew install make
 echo "-----------------------------------------------------------"
 echo ""
 
