@@ -48,10 +48,10 @@ sudo --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install sudo"
-    apt install -y sudo
+    pacman -Syu sudo --noconfirm
 fi
-sudo apt update
-sudo apt install -y cmake build-essential automake git ssl-cert clang-tools
+sudo pacman -Syu
+sudo pacman -Syu cmake base-devel automake git ssl-cert clang-tools --noconfirm
 echo "-----------------------------------------------------------"
 echo ""
 sleep 1
@@ -62,7 +62,7 @@ curl --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Curl..."
-    sudo apt install -y curl
+    sudo pacman -Syu curl --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -74,7 +74,7 @@ snap --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Snap..."
-    sudo apt install -y snapd
+    sudo pacman -Syu snapd --noconfirm
     export PATH=$PATH:/snap/bin
 fi
 echo "-----------------------------------------------------------"
@@ -88,10 +88,7 @@ if [ "$status" != 0 ]; then
     echo "Install NeoVim..."
     sudo snap install --beta nvim --classic
     if [ "$?" != 0 ]; then
-        sudo apt install -y software-properties-common
-        sudo add-apt-repository ppa:neovim-ppa/unstable -y
-        sudo apt update -y
-        sudo apt install -y neovim
+        sudo pacman -Syu neovim --noconfirm
     fi
 fi
 echo "-----------------------------------------------------------"
@@ -121,14 +118,14 @@ python --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Python2..."
-    sudo apt install -y python
+    sudo pacman -Syu python --noconfirm
 fi
 
 python3 --version
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Python3..."
-    sudo apt install -y python3
+    sudo pacman -Syu python3 --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -139,7 +136,7 @@ perl -v
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Perl..."
-    sudo apt install -y perl
+    sudo pacman -Syu perl --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -150,7 +147,7 @@ ruby -v
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install ruby..."
-    sudo apt install -y ruby
+    sudo pacman -Syu ruby --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -161,7 +158,7 @@ latexmk -v
 status=$?
 if [ "$status" != 0 ]; then
     echo "Install Latexmk..."
-    sudo apt install -y latexmk
+    sudo pacman -Syu latexmk --noconfirm
 fi
 echo "-----------------------------------------------------------"
 echo ""
@@ -181,7 +178,7 @@ echo ""
 echo "Python3:"
 pip3 --version
 if [ "$?" != 0 ]; then
-    sudo apt install -y python3-pip
+    sudo pacman -Syu python3-pip --noconfirm
 fi
 pip3 install neovim
 pip3 install neovim-remote
@@ -190,13 +187,13 @@ echo ""
 echo "Ruby:"
 gem -v
 if [ "$?" -eq 0 ]; then
-    sudo apt install -y ruby-dev
+    sudo pacman -Syu ruby-dev --noconfirm
     sudo gem install neovim
 fi
 
 echo ""
 echo "Perl:"
-sudo apt install -y cpanminus pmuninstall
+sudo pacman -Syu cpanminus pmuninstall --noconfirm
 cpanm -v
 if [ "$?" -eq 0 ]; then
     cpanm --local-lib ~/perl5 Neovim::Ext
@@ -231,26 +228,26 @@ echo ""
 sleep 1
 
 echo "Install astyle--------------------------------------------"
-sudo apt install -y astyle
+sudo pacman -Syu astyle --noconfirm
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
 echo "Install universal ctags---------------------------------------------"
-sudo apt install universal-ctags
+sudo pacman -Syu universal-ctags --noconfirm
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
 echo "Install the other formatters------------------------------"
-sudo apt install -y clang-format
+sudo pacman -Syu clang-format --noconfirm
 sudo snap install shfmt
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
 
 echo "Install xclip---------------------------------------------"
-sudo apt install -y xclip
+sudo pacman -Syu xclip --noconfirm
 echo "----------------------------------------------------------"
 echo ""
 sleep 1
@@ -287,9 +284,9 @@ echo ""
 sleep 1
 
 echo "Clean trash and packages----------------------------------"
-sudo apt autoremove -y
+sudo pacman -Syu autoremove --noconfirm
 if [ ! -d ".git" ]; then
-    rm ubuntu_install.sh
+    rm archlinux_install.sh
 fi
 echo "----------------------------------------------------------"
 echo ""
