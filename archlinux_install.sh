@@ -66,6 +66,7 @@ brew install libseccomp
 brew install make
 brew install automake
 brew install autoconf
+brew install node
 echo "-----------------------------------------------------------"
 echo ""
 
