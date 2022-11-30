@@ -68,7 +68,7 @@ brew install automake
 brew install autoconf
 brew install node
 brew install cpanminus
-
+brew install glib
 echo "-----------------------------------------------------------"
 echo ""
 
