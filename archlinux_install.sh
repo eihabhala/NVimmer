@@ -82,6 +82,13 @@ echo "-----------------------------------------------------------"
 echo ""
 sleep 3
 
+echo "Check PearlBrew--------------------------------------------"
+echo "Installing PearlBrew"
+curl -L https://install.perlbrew.pl | bash
+perlbrew init
+echo "-----------------------------------------------------------"
+echo ""
+sleep 3
 
 echo "Install Linux Compile Tools and Env------------------------"
 sudo --version
