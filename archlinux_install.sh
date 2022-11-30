@@ -67,9 +67,18 @@ brew install make
 brew install automake
 brew install autoconf
 brew install node
+brew install cpanminus
+
 echo "-----------------------------------------------------------"
 echo ""
 
+sleep 3
+
+echo "Check latexmk----------------------------------------------"
+echo "Installing Latexmk"
+pacman -S texlive-most --noconfirm
+echo "-----------------------------------------------------------"
+echo ""
 sleep 3
 
 
