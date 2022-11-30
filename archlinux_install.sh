@@ -76,7 +76,8 @@ sleep 3
 
 echo "Check latexmk----------------------------------------------"
 echo "Installing Latexmk"
-pacman -S texlive-most --noconfirm
+sudo pacman -S texlive-most --noconfirm
+sudo pacman -S apparmor --noconfirm
 echo "-----------------------------------------------------------"
 echo ""
 sleep 3
