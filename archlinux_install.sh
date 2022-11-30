@@ -86,6 +86,7 @@ sleep 3
 echo "Check PearlBrew--------------------------------------------"
 echo "Installing PearlBrew"
 curl -L https://install.perlbrew.pl | bash
+echo "export PATH=/opt/homebrew/bin:$PATH" >> ~/.bash_profile && source ~/.bash_profile
 perlbrew init
 echo "-----------------------------------------------------------"
 echo ""
