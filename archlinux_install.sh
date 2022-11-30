@@ -69,6 +69,7 @@ brew install autoconf
 brew install node
 brew install cpanminus
 brew install glib
+brew install clang-format
 echo "-----------------------------------------------------------"
 echo ""
 
