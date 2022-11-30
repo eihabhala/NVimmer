@@ -183,6 +183,14 @@ echo "-----------------------------------------------------------"
 echo ""
 sleep 1
 
+echo "Check local::lib-------------------------------------------"
+perl Makefile.PL --bootstrap
+make test && make install
+echo 'eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"' >>~/.bashrc
+echo "------------------------------------------------------------"
+echo ""
+sleep 3
+
 echo "Check Ruby-------------------------------------------------"
 ruby -v
 status=$?
